@@ -8,7 +8,7 @@ const cors=require("cors")
 mongoDB();
 
 app.use((req,res,next)=>{
-  res.setHeader("Access-Control-Allow-Origin","https://go-food.onrender.com",);
+  res.setHeader("Access-Control-Allow-Origin","https://go-food-smyf.onrender.com",);
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
