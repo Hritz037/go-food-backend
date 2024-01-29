@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 5000
+const PORT = process.env.PORT || 5000
 const mongoDB=require("./db");
 const cors=require("cors")
 // app.use(cors({origin:'http://localhost:3000',
@@ -29,8 +29,8 @@ app.use('/api',require("./Routes/OrderData"))
 app.use('/api',require("./Routes/GeoLocation"))
 
 app.get('/', (req, res) => {
-  res.json({port:port})
+  res.json({PORT:PORT})
 })
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen(PORT, () => {
+  console.log(`Example app listening on PORT ${PORT}`)
 })
