@@ -29,7 +29,7 @@ app.use('/api',require("./Routes/OrderData"))
 app.use('/api',require("./Routes/GeoLocation"))
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.json({port:port})
 })
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
