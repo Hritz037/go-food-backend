@@ -30,8 +30,8 @@ router.post('/getlocation',async(req,res)=>{
         //       // "1330 Middle Avenue, Menlo Park, Californie 94025, États-Unis d'Amérique"
         //     }
         //   });
-        let c="https://api.opencagedata.com/geocode/v1/json?q=" + lat + "%2C" + long + "&key="+apikey
-        console.log(c)
+        // let c="https://api.opencagedata.com/geocode/v1/json?q=" + lat + "%2C" + long + "&key="+apikey
+        // console.log(c)
         let location = await axios
         .get("https://api.opencagedata.com/geocode/v1/json?q=" + lat + "%2C" + long + "&key="+apikey)
         .then(async (res) => {
